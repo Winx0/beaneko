@@ -7,63 +7,37 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(to bottom, #111827, #1f2937);
+      background-color: #111827;
       color: white;
-      font-family: 'Inter', sans-serif;
+      font-family: Arial, sans-serif;
     }
-    .gradient-text {
-      background: linear-gradient(90deg, #8b5cf6, #ec4899);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .gradient-bg {
-      background: linear-gradient(90deg, #8b5cf6, #ec4899);
-    }
-    .card {
-      background: rgba(31, 41, 55, 0.8);
-      backdrop-filter: blur(10px);
-      transition: all 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-    .token-stats {
-      background: rgba(17, 24, 39, 0.6);
-      backdrop-filter: blur(5px);
+    .purple-text {
+      color: #a855f7;
     }
   </style>
 </head>
 <body>
-  <div id="app">
+  <div>
     <!-- Header -->
-    <header class="py-6 px-4 fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-90 backdrop-blur-sm">
+    <header class="py-4 px-4 bg-gray-900">
       <div class="container mx-auto flex justify-between items-center">
-        <div class="text-2xl font-bold gradient-text">Beaneko</div>
-        <nav class="hidden md:block">
-          <ul class="flex space-x-8">
-            <li><a href="#about" class="hover:text-purple-500 transition-colors">About</a></li>
-            <li><a href="#team" class="hover:text-purple-500 transition-colors">Team</a></li>
-            <li><a href="#tokenomics" class="hover:text-purple-500 transition-colors">Tokenomics</a></li>
+        <div class="text-2xl font-bold purple-text">Beaneko</div>
+        <nav>
+          <ul class="flex space-x-6">
+            <li><a href="#about" class="hover:text-purple-400">About</a></li>
+            <li><a href="#team" class="hover:text-purple-400">Team</a></li>
           </ul>
         </nav>
-        <button class="md:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 min-h-screen flex items-center">
+    <section class="py-16 px-4">
       <div class="container mx-auto text-center">
-        <h1 class="text-5xl md:text-7xl font-bold mb-6">
-          <span class="gradient-text">Beaneko Token</span>
-        </h1>
-        <p class="text-xl md:text-2xl mb-10 text-gray-300">The Next Generation Meme Token</p>
+        <h1 class="text-5xl font-bold mb-4 purple-text">Beaneko Token</h1>
+        <p class="text-xl mb-10">The Next Generation Meme Token</p>
         
-        <div class="token-stats p-6 rounded-xl mb-10 max-w-3xl mx-auto">
+        <div class="bg-gray-800 p-6 rounded-xl mb-10 max-w-3xl mx-auto">
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div>
               <p class="text-gray-400 text-sm">Price</p>
@@ -85,58 +59,32 @@
         </div>
         
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="#" class="gradient-bg text-white font-bold py-3 px-8 rounded-full transition-all hover:opacity-90 hover:shadow-lg">Buy Now</a>
-          <a href="#" class="bg-transparent border border-purple-500 text-white font-bold py-3 px-8 rounded-full transition-colors hover:bg-purple-500 hover:bg-opacity-20">View Chart</a>
+          <a href="#" class="bg-purple-600 text-white font-bold py-3 px-8 rounded-lg">Buy Now</a>
+          <a href="#" class="bg-transparent border border-purple-500 text-white font-bold py-3 px-8 rounded-lg">View Chart</a>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-4">
+    <section id="about" class="py-16 px-4 bg-gray-900">
       <div class="container mx-auto">
-        <h2 class="text-4xl font-bold mb-12 text-center">
-          <span class="gradient-text">About Beaneko</span>
-        </h2>
+        <h2 class="text-3xl font-bold mb-10 text-center purple-text">About Beaneko</h2>
         
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p class="text-lg mb-6 text-gray-300">
-              Beaneko is not just another meme token. Born from the combination of beans and neko (cat), this project combines fun with real utility in the cryptocurrency space.
-            </p>
-            <p class="text-lg mb-6 text-gray-300">
-              Our mission is to build a strong community of holders and supporters while providing unique utility in the meme token landscape.
-            </p>
-            <p class="text-lg text-gray-300">
-              With a dedicated team of developers and marketers, Beaneko aims to become a staple name in the meme coin space, bringing both entertainment and value to our holders.
-            </p>
-          </div>
-          <div class="bg-purple-900 bg-opacity-20 p-8 rounded-2xl border border-purple-800">
-            <h3 class="text-2xl font-bold mb-6 gradient-text">Key Features</h3>
-            <ul class="space-y-4">
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Community-driven governance</span>
-              </li>
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Regular token burns to increase scarcity</span>
-              </li>
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Unique rewards for long-term holders</span>
-              </li>
-              <li class="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Strong liquidity locking to ensure stability</span>
-              </li>
+        <div class="max-w-4xl mx-auto">
+          <p class="mb-6">
+            Beaneko is not just another meme token. Born from the combination of beans and neko (cat), this project combines fun with real utility in the cryptocurrency space.
+          </p>
+          <p class="mb-6">
+            Our mission is to build a strong community of holders and supporters while providing unique utility in the meme token landscape.
+          </p>
+          
+          <div class="bg-gray-800 p-6 rounded-lg mt-8">
+            <h3 class="text-xl font-bold mb-4 purple-text">Key Features</h3>
+            <ul class="space-y-2">
+              <li>• Community-driven governance</li>
+              <li>• Regular token burns to increase scarcity</li>
+              <li>• Unique rewards for long-term holders</li>
+              <li>• Strong liquidity locking to ensure stability</li>
             </ul>
           </div>
         </div>
@@ -144,188 +92,71 @@
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="py-20 px-4 bg-gray-900 bg-opacity-60">
+    <section id="team" class="py-16 px-4">
       <div class="container mx-auto">
-        <h2 class="text-4xl font-bold mb-12 text-center">
-          <span class="gradient-text">Our Team</span>
-        </h2>
+        <h2 class="text-3xl font-bold mb-10 text-center purple-text">Our Team</h2>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           <!-- Team Member 1 -->
-          <div class="card p-6 rounded-xl border border-gray-800 hover:border-purple-500">
-            <div class="w-24 h-24 bg-purple-600 rounded-full mx-auto mb-4 overflow-hidden">
-              <img src="https://api.dicebear.com/7.x/bottts/svg?seed=ELEA&backgroundColor=6d28d9" alt="ELEA RACHEL" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-xl font-bold text-center">ELEA RACHEL</h3>
-            <p class="text-gray-400 mb-4 text-center">Co-Founder</p>
-            <div class="text-center">
-              <a href="https://x.com/Elearachel" target="_blank" class="inline-flex items-center text-purple-400 hover:text-purple-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                </svg>
-                Twitter
-              </a>
-            </div>
+          <div class="bg-gray-800 p-4 rounded-lg text-center">
+            <div class="w-20 h-20 bg-purple-600 rounded-full mx-auto mb-4"></div>
+            <h3 class="text-lg font-bold">ELEA RACHEL</h3>
+            <p class="text-gray-400 mb-2">Co-Founder</p>
+            <a href="https://x.com/Elearachel" target="_blank" class="text-purple-400 hover:text-purple-300">Twitter</a>
           </div>
           
           <!-- Team Member 2 -->
-          <div class="card p-6 rounded-xl border border-gray-800 hover:border-purple-500">
-            <div class="w-24 h-24 bg-purple-600 rounded-full mx-auto mb-4 overflow-hidden">
-              <img src="https://api.dicebear.com/7.x/bottts/svg?seed=SADDAM&backgroundColor=6d28d9" alt="SADDAM MOVIC" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-xl font-bold text-center">SADDAM MOVIC</h3>
-            <p class="text-gray-400 mb-4 text-center">Lead Developer</p>
-            <div class="text-center">
-              <a href="https://x.com/SaddamWeb3" target="_blank" class="inline-flex items-center text-purple-400 hover:text-purple-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                </svg>
-                Twitter
-              </a>
-            </div>
+          <div class="bg-gray-800 p-4 rounded-lg text-center">
+            <div class="w-20 h-20 bg-purple-600 rounded-full mx-auto mb-4"></div>
+            <h3 class="text-lg font-bold">SADDAM MOVIC</h3>
+            <p class="text-gray-400 mb-2">Lead Developer</p>
+            <a href="https://x.com/SaddamWeb3" target="_blank" class="text-purple-400 hover:text-purple-300">Twitter</a>
           </div>
           
           <!-- Team Member 3 -->
-          <div class="card p-6 rounded-xl border border-gray-800 hover:border-purple-500">
-            <div class="w-24 h-24 bg-purple-600 rounded-full mx-auto mb-4 overflow-hidden">
-              <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Lydicius&backgroundColor=6d28d9" alt="Lydicius" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-xl font-bold text-center">Lydicius (svm/acc)</h3>
-            <p class="text-gray-400 mb-4 text-center">Community Manager</p>
-            <div class="text-center">
-              <a href="https://x.com/jolu_louis" target="_blank" class="inline-flex items-center text-purple-400 hover:text-purple-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                </svg>
-                Twitter
-              </a>
-            </div>
+          <div class="bg-gray-800 p-4 rounded-lg text-center">
+            <div class="w-20 h-20 bg-purple-600 rounded-full mx-auto mb-4"></div>
+            <h3 class="text-lg font-bold">Lydicius</h3>
+            <p class="text-gray-400 mb-2">Community Manager</p>
+            <a href="https://x.com/jolu_louis" target="_blank" class="text-purple-400 hover:text-purple-300">Twitter</a>
           </div>
           
           <!-- Team Member 4 -->
-          <div class="card p-6 rounded-xl border border-gray-800 hover:border-purple-500">
-            <div class="w-24 h-24 bg-purple-600 rounded-full mx-auto mb-4 overflow-hidden">
-              <img src="https://api.dicebear.com/7.x/bottts/svg?seed=MaestroKoro&backgroundColor=6d28d9" alt="MaestroKoro" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-xl font-bold text-center">MaestroKoro⨀(evm/acc)</h3>
-            <p class="text-gray-400 mb-4 text-center">Marketing Lead</p>
-            <div class="text-center">
-              <a href="https://x.com/dgkoro_koro" target="_blank" class="inline-flex items-center text-purple-400 hover:text-purple-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                </svg>
-                Twitter
-              </a>
-            </div>
+          <div class="bg-gray-800 p-4 rounded-lg text-center">
+            <div class="w-20 h-20 bg-purple-600 rounded-full mx-auto mb-4"></div>
+            <h3 class="text-lg font-bold">MaestroKoro</h3>
+            <p class="text-gray-400 mb-2">Marketing Lead</p>
+            <a href="https://x.com/dgkoro_koro" target="_blank" class="text-purple-400 hover:text-purple-300">Twitter</a>
           </div>
           
           <!-- Team Member 5 -->
-          <div class="card p-6 rounded-xl border border-gray-800 hover:border-purple-500">
-            <div class="w-24 h-24 bg-purple-600 rounded-full mx-auto mb-4 overflow-hidden">
-              <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Mario&backgroundColor=6d28d9" alt="Mario Bruh" class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-xl font-bold text-center">Mario Bruh</h3>
-            <p class="text-gray-400 mb-4 text-center">Design Lead</p>
-            <div class="text-center">
-              <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                </svg>
-                Twitter
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tokenomics Section -->
-    <section id="tokenomics" class="py-20 px-4">
-      <div class="container mx-auto">
-        <h2 class="text-4xl font-bold mb-12 text-center">
-          <span class="gradient-text">Tokenomics</span>
-        </h2>
-        
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <!-- Chart visualization -->
-          <div class="bg-gray-800 bg-opacity-50 p-6 rounded-xl">
-            <div class="aspect-square rounded-full mx-auto mb-6 overflow-hidden relative" style="background: conic-gradient(#8b5cf6 0% 45%, #ec4899 45% 65%, #10b981 65% 75%, #f59e0b 75% 85%, #ef4444 85% 100%);">
-              <div class="absolute inset-1/4 bg-gray-900 rounded-full"></div>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-              <div class="flex items-center">
-                <span class="w-3 h-3 bg-purple-500 rounded-full mr-2"></span>
-                <span>Liquidity: 45%</span>
-              </div>
-              <div class="flex items-center">
-                <span class="w-3 h-3 bg-pink-500 rounded-full mr-2"></span>
-                <span>Marketing: 20%</span>
-              </div>
-              <div class="flex items-center">
-                <span class="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                <span>Development: 10%</span>
-              </div>
-              <div class="flex items-center">
-                <span class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
-                <span>Team: 10%</span>
-              </div>
-              <div class="flex items-center">
-                <span class="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
-                <span>Community: 15%</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Token info -->
-          <div>
-            <div class="space-y-6">
-              <div class="card p-4 rounded-lg">
-                <p class="text-lg mb-2 font-bold">Token Name:</p>
-                <p class="text-xl text-purple-400">Beaneko</p>
-              </div>
-              
-              <div class="card p-4 rounded-lg">
-                <p class="text-lg mb-2 font-bold">Symbol:</p>
-                <p class="text-xl text-purple-400">BEANS</p>
-              </div>
-              
-              <div class="card p-4 rounded-lg">
-                <p class="text-lg mb-2 font-bold">Total Supply:</p>
-                <p class="text-xl text-purple-400">100,000,000,000 BEANS</p>
-              </div>
-              
-              <div class="card p-4 rounded-lg">
-                <p class="text-lg mb-2 font-bold">Network:</p>
-                <p class="text-xl text-purple-400">Ethereum (ERC-20)</p>
-              </div>
-              
-              <div class="card p-4 rounded-lg">
-                <p class="text-lg mb-2 font-bold">Tax:</p>
-                <p class="text-xl text-purple-400">0% Buy / 0% Sell</p>
-              </div>
-            </div>
+          <div class="bg-gray-800 p-4 rounded-lg text-center">
+            <div class="w-20 h-20 bg-purple-600 rounded-full mx-auto mb-4"></div>
+            <h3 class="text-lg font-bold">Mario Bruh</h3>
+            <p class="text-gray-400 mb-2">Design Lead</p>
+            <a href="#" class="text-purple-400 hover:text-purple-300">Twitter</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 bg-gray-900 bg-opacity-80">
+    <footer class="py-8 px-4 bg-gray-800">
       <div class="container mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-center md:items-start mb-8">
-          <div class="mb-8 md:mb-0 text-center md:text-left">
-            <div class="text-2xl font-bold gradient-text mb-2">Beaneko</div>
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <div class="text-xl font-bold purple-text mb-2">Beaneko</div>
             <p class="text-gray-400">The Next Generation Meme Token</p>
           </div>
           
           <div class="flex space-x-6">
-            <a href="https://t.me/+g6xPuAvhWkI5YWM1" target="_blank" class="text-gray-400 hover:text-purple-400 text-xl">
+            <a href="https://t.me/+g6xPuAvhWkI5YWM1" target="_blank" class="text-gray-400 hover:text-purple-400">
               <!-- Telegram Icon -->
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.214-.657-.637.134-.943l11.59-4.488c.538-.196 1.006.128.81.959z"/>
               </svg>
             </a>
-            <a href="https://x.com/beaneko_xyz" target="_blank" class="text-gray-400 hover:text-purple-400 text-xl">
+            <a href="https://x.com/beaneko_xyz" target="_blank" class="text-gray-400 hover:text-purple-400">
               <!-- Twitter Icon -->
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/>
@@ -334,7 +165,7 @@
           </div>
         </div>
         
-        <div class="border-t border-gray-800 pt-8 text-center">
+        <div class="border-t border-gray-700 mt-6 pt-6 text-center">
           <p class="text-gray-500">© 2023 Beaneko. All rights reserved.</p>
         </div>
       </div>
